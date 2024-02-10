@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.drawer-menu {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  right: -100%;
+  opacity: 1;
+  background-color: $green;
+  transition: right 0.3s ease;
+}
+
+.drawer-menu.is-open {
+  right: 0;
+}
+
+.drawer-menu__inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2.5rem;
+}
+
+.drawer-menu__wrapper {
+  display: flex;
+}
+
+.drawer-menu__body {
+  margin-left: 0.5rem;
+}
+
+.drawer-menu__item {
+  font-size: 1rem;
+  font-weight: $regular;
+  color: $white;
+  display: inline-block;
+  text-align: left;
+  padding-top: 1.5rem;
+}
+a.drawer-menu__item {
+  font-size: 1rem;
+  font-weight: $bold;
+  font-family: $base-font-family;
+  position: relative;
+  text-align: left;
+  margin-top: 1rem;
+}
+a.drawer-menu__item::before {
+  content: url("/assets/images/common/drawer-icon.svg");
+  margin-right: 0.3rem;
+  vertical-align: middle;
+  position: absolute;
+  top: 1.56rem;
+  left: -1.25rem;
+}

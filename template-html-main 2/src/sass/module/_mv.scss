@@ -1,0 +1,51 @@
+@use "global" as *;
+// mv
+.mv {
+  width: 100%;
+}
+
+.mv__inner {
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.mv__slider,
+.swiper-slide picture,
+.swiper-slide img {
+  height: inherit;
+}
+
+.swiper-slide img {
+  object-fit: cover;
+}
+
+.mv__title-wrap {
+  position: absolute;
+  z-index: 10;
+  top: -5%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 66%;
+  height: 5rem;
+  text-align: center;
+}
+.mv__title {
+  font-size: 2.5rem;
+  font-weight: $regular;
+  font-family: $base-font-family;
+  letter-spacing: 0.54em;
+  color: $white;
+  @include mq("md") {
+    font-size: 5rem;
+  }
+}
+.mv__title-sub {
+  font-size: 1.25rem;
+  //   font-weight: $regular;
+  font-family: $base-font-family;
+  letter-spacing: 0.1rem;
+  color: $white;
+}

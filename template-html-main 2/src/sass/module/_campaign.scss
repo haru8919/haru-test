@@ -1,0 +1,222 @@
+@use "global" as *;
+
+.campaign {
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
+  position: relative;
+  @include mq("md") {
+    padding-top: 7.5rem;
+    padding-bottom: 8.75rem;
+  }
+}
+
+.campaign__cards {
+  margin-top: 1.5rem;
+  @include mq("md") {
+    margin-top: 2.5rem;
+  }
+}
+
+.campaign__contents {
+  padding-top: 0.93rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.campaign__box {
+  border-bottom: 1px solid $green;
+}
+.campaign__tag {
+  border: 1px solid $green;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+}
+.campaign__category {
+  color: $green;
+  font-size: 0.75rem;
+  font-weight: $regular;
+  line-height: 1.88;
+  font-family: $second-font-family;
+}
+
+.campaign__description {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.campaign__container {
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.campaign__price-wrap {
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.campaign__price-out {
+  font-size: 1.25rem;
+  font-weight: $bold;
+  font-family: $third-font-family;
+  text-decoration: line-through red;
+}
+
+.campaign__price-in {
+  padding-left: 1rem;
+  font-size: 2rem;
+  font-weight: $bold;
+  font-family: $third-font-family;
+  color: $green;
+}
+
+.campaign__contact {
+  padding-top: 2.5rem;
+  @include mq("md") {
+    padding-top: 5rem;
+  }
+}
+
+.swiper2 {
+  margin-right: calc(70% - 50vw);
+}
+
+.campaign__card {
+  box-shadow: 2px 2px 4px;
+  @include mq("md") {
+    max-width: 20.8rem;
+    width: 100%;
+  }
+}
+.campaign__title {
+  position: relative;
+}
+.campaign__wrap {
+  display: flex;
+  position: absolute;
+  right: 23%;
+  top: 18%;
+}
+
+// .swiper-button-prev::after {
+//   display: none;
+//   @include mq("md") {
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     background-image: url(/assets/images/common/campaign-next.svg);
+//     content: "";
+//     display: block;
+//     height: 5rem;
+//     width: 5rem;
+//   }
+// }
+// .swiper-button-next::after {
+//   display: none;
+//   @include mq("md") {
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     background-image: url(/assets/images/common/campaign-prev.svg);
+//     content: "";
+//     display: block;
+//     height: 5rem;
+//     width: 5rem;
+//     margin-left: 5rem;
+//   }
+// }
+// .swiper-button-prev,
+// .swiper-button-next {
+//   //   display: block;
+//   height: 5rem;
+//   width: 5rem;
+// }
+
+// .swiper-button-next::after {
+//   background: url(../images/common/campaign-next.svg);
+//   content: "";
+//   display: block;
+//   height: 5rem;
+//   width: 5rem;
+// }
+
+// .swiper-button-prev::after {
+//   background: url(../images/common/campaign-prev.svg);
+//   content: "";
+//   display: block;
+//   height: 5rem;
+//   width: 5rem;
+// }
+
+// /* デフォルトの矢印を非表示にする */
+// .swiper-button-prev::after,
+// .swiper-rtl .swiper-button-next::after {
+//   content: none; /* contentプロパティを無効化する */
+// }
+/* 前へ次への矢印カスタマイズ */
+/* デフォルトの矢印を非表示にする */
+// .swiper-button-prev::after,
+// .swiper-rtl .swiper-button-next::after {
+//   content: none;
+// }
+
+// /* 背景画像の矢印を設定する */
+// .swiper-button-next::before,
+// .swiper-button-prev::before {
+//   content: "";
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   display: inline-block;
+//   height: 50px;
+//   width: 50px;
+// }
+
+// /* 背景画像の矢印に画像を設定 */
+// .swiper-button-next::before {
+//   background-image: url(/assets/images/common/campaign-next.svg);
+// }
+
+// .swiper-button-prev::before {
+//   background-image: url(/assets/images/common/campaign-prev.svg);
+// }
+// .swiper-button-next::before,
+// .swiper-button-prev::before {
+//   width: 50px;
+//   height: 50px;
+// }
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+  height: 5rem;
+  width: 5rem;
+}
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 50px;
+  margin: auto;
+  width: 50px;
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+  background-image: url(/assets/images/common/campaign-prev.svg);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+  background-image: url(/assets/images/common/campaign-next.svg);
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}

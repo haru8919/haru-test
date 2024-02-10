@@ -1,0 +1,703 @@
+body {
+	font-family: "Gotu", sans-serif;
+}
+
+.u-desktop {
+	display: none;
+}
+
+/* リキッドレイアウト対応 */
+
+html {
+	font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default padding */
+
+ul,
+ol {
+	padding: 0;
+}
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Set core root defaults */
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+
+body {
+	line-height: 1.5;
+	min-height: 100vh;
+	text-rendering: optimizeLegibility;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+
+ul,
+ol {
+	list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+	-webkit-text-decoration-skip: ink;
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img {
+	display: block;
+	max-width: 100%;
+	width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+
+article > * + * {
+	margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+
+img:not([alt]) {
+	filter: blur(10px);
+}
+
+/* フォームリセット */
+
+input,
+button,
+select,
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	font: inherit;
+	outline: none;
+}
+
+textarea {
+	resize: vertical;
+}
+
+input[type=checkbox],
+input[type=radio] {
+	display: none;
+}
+
+input[type=submit],
+input[type=button],
+label,
+button,
+select {
+	cursor: pointer;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+/* ホバー */
+
+a {
+	-webkit-text-decoration: none;
+	color: inherit;
+	text-decoration: none;
+	transition: opacity 0.3s;
+}
+
+.campaign {
+	overflow: hidden;
+	padding-bottom: 5rem;
+	padding-top: 2.5rem;
+	position: relative;
+}
+
+.campaign__cards {
+	margin-top: 1.5rem;
+}
+
+.campaign__contents {
+	padding-bottom: 1.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.93rem;
+}
+
+.campaign__box {
+	border-bottom: 1px solid #408f95;
+}
+
+.campaign__tag {
+	border: 1px solid #408f95;
+	display: inline-block;
+	padding: 0.25rem 0.75rem;
+}
+
+.campaign__category {
+	color: #408f95;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 0.75rem;
+	font-weight: 300;
+	line-height: 1.88;
+}
+
+.campaign__description {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+.campaign__container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding-top: 0.5rem;
+}
+
+.campaign__price-wrap {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 0.5rem;
+}
+
+.campaign__price-out {
+	-webkit-text-decoration: line-through red;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	text-decoration: line-through;
+	text-decoration: line-through red;
+}
+
+.campaign__price-in {
+	color: #408f95;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 2rem;
+	font-weight: 700;
+	padding-left: 1rem;
+}
+
+.campaign__contact {
+	padding-top: 2.5rem;
+}
+
+.swiper2 {
+	margin-right: calc(70% - 50vw);
+}
+
+.campaign__card {
+	box-shadow: 2px 2px 4px;
+}
+
+.campaign__title {
+	position: relative;
+}
+
+.campaign__wrap {
+	display: flex;
+	position: absolute;
+	right: 23%;
+	top: 18%;
+}
+
+/* 前へ次への矢印カスタマイズ */
+
+/* デフォルトの矢印を非表示にする */
+
+/* 前へ次への矢印カスタマイズ */
+
+.swiper-button-prev,
+.swiper-button-next {
+	height: 5rem;
+	width: 5rem;
+}
+
+/* 前へ次への矢印カスタマイズ */
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 50px;
+	margin: auto;
+	width: 50px;
+}
+
+/* 前への矢印カスタマイズ */
+
+.swiper-button-prev::after {
+	background-image: url(/assets/images/common/campaign-prev.svg);
+}
+
+/* 次への矢印カスタマイズ */
+
+.swiper-button-next::after {
+	background-image: url(/assets/images/common/campaign-next.svg);
+}
+
+/* 画像サイズ調整 */
+
+.swiper-slide img {
+	height: auto;
+	width: 100%;
+}
+
+.drawer-menu {
+	background-color: #408f95;
+	height: 100vh;
+	opacity: 1;
+	position: fixed;
+	right: -100%;
+	top: 0;
+	transition: right 0.3s ease;
+	width: 100%;
+	z-index: 1000;
+}
+
+.drawer-menu.is-open {
+	right: 0;
+}
+
+.drawer-menu__inner {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding-top: 2.5rem;
+}
+
+.drawer-menu__wrapper {
+	display: flex;
+}
+
+.drawer-menu__body {
+	margin-left: 0.5rem;
+}
+
+.drawer-menu__item {
+	color: #fff;
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: 300;
+	padding-top: 1.5rem;
+	text-align: left;
+}
+
+a.drawer-menu__item {
+	font-family: "Gotu", sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	margin-top: 1rem;
+	position: relative;
+	text-align: left;
+}
+
+a.drawer-menu__item::before {
+	content: url("/assets/images/common/drawer-icon.svg");
+	left: -1.25rem;
+	margin-right: 0.3rem;
+	position: absolute;
+	top: 1.56rem;
+	vertical-align: middle;
+}
+
+.header {
+	background: rgba(13, 41, 54, 0.68);
+	height: 5rem;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.header__inner {
+	align-items: center;
+	display: flex;
+	height: inherit;
+	padding: 0 0.937rem;
+}
+
+.header__logo {
+	margin-right: auto;
+	z-index: 1500;
+}
+
+.header-logo__link {
+	width: 6.375rem;
+}
+
+.hamburger {
+	cursor: pointer;
+	height: 2rem;
+	position: fixed;
+	right: 1rem;
+	top: 1.75rem;
+	width: 2rem;
+	z-index: 1500;
+}
+
+.hamburger.is-active {
+	right: 1.25rem;
+	top: 1.65rem;
+}
+
+.hamburger span {
+	background-color: #fff;
+	display: inline-block;
+	height: 0.06rem;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.hamburger,
+.hamburger span {
+	box-sizing: border-box;
+	display: inline-block;
+	transition: all 0.5s;
+}
+
+.hamburger span:nth-child(1) {
+	top: 0;
+}
+
+.hamburger span:nth-child(2) {
+	top: 0.75rem;
+}
+
+.hamburger span:nth-child(3) {
+	top: 1.5rem;
+}
+
+.hamburger.is-active span:nth-child(1) {
+	transform: translateY(0.76rem) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger.is-active span:nth-child(3) {
+	transform: translateY(-0.76rem) rotate(-45deg);
+}
+
+.header__wrapper {
+	height: inherit;
+}
+
+.header__nav {
+	height: inherit;
+}
+
+.header__items {
+	align-items: center;
+	display: flex;
+	height: inherit;
+	justify-content: center;
+}
+
+.header__item {
+	display: flex;
+	height: inherit;
+}
+
+.header__item:not(:first-child) {
+	margin-left: 2.5rem;
+}
+
+.header__link {
+	align-items: center;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.125rem;
+	justify-content: center;
+}
+
+.header__link span {
+	display: block;
+	font-size: 0.6rem;
+	position: relative;
+}
+
+.header__link span::after {
+	background: #fff;
+	bottom: 0;
+	content: "";
+	height: 0.125rem;
+	left: 10%;
+	position: absolute;
+	transform: scale(0, 1); /*X方向0、Y方向1*/
+	transform-origin: center top; /*上部中央基点*/ /*アニメーションの指定*/
+	transition: all 0.3s; /*線の形状*/
+	width: 80%;
+}
+
+.header__link:hover span::after {
+	transform: scale(1, 1);
+}
+
+.inner {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
+}
+
+.mv {
+	width: 100%;
+}
+
+.mv__inner {
+	height: inherit;
+	position: relative;
+	width: 100%;
+}
+
+.mv__slider,
+.swiper-slide picture,
+.swiper-slide img {
+	height: inherit;
+}
+
+.swiper-slide img {
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.mv__title-wrap {
+	bottom: 0;
+	height: 5rem;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: -5%;
+	width: 66%;
+	z-index: 10;
+}
+
+.mv__title {
+	color: #fff;
+	font-family: "Gotu", sans-serif;
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.54em;
+}
+
+.mv__title-sub {
+	color: #fff;
+	font-family: "Gotu", sans-serif;
+	font-size: 1.25rem;
+	letter-spacing: 0.1rem;
+}
+
+.section-title {
+	display: inline-block;
+	width: 100%;
+}
+
+.section-title__main {
+	color: #0d2936;
+	font-family: "Gotu", sans-serif;
+	font-size: 2rem;
+	line-height: 1.25;
+	text-align: center;
+}
+
+.section-title__main span {
+	color: #408f95;
+}
+
+.section-title__sub {
+	color: #408f95;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 0.75rem;
+	font-weight: 300;
+	line-height: 1.5;
+	text-align: center;
+}
+
+a.btn {
+	-webkit-text-decoration: none;
+	background: #408f95;
+	border: 1px solid #408f95;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	margin: auto;
+	padding: 1rem 3rem;
+	position: relative;
+	text-decoration: none;
+	transition: 0.3s ease-in-out;
+	width: 12.6rem;
+}
+
+a.btn::before {
+	border: 1px solid #408f95;
+	content: "";
+	height: calc(100% - 4px);
+	left: 10px;
+	position: absolute;
+	top: 9px;
+	transition: 0.2s;
+	width: calc(100% - 4px);
+	z-index: -1;
+}
+
+.btn-icon {
+	position: absolute;
+	right: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 2.5rem;
+}
+
+a.btn:hover .btn-icon path {
+	stroke: #408f95;
+}
+
+a.btn:hover {
+	background: #fff;
+	color: #408f95;
+}
+
+.md-show {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+.u-desktop {
+	display: block;
+}
+
+.u-mobile {
+	display: none;
+}
+
+html {
+	font-size: 1.4545454545vw;
+}
+
+.campaign {
+	padding-bottom: 8.75rem;
+	padding-top: 7.5rem;
+}
+
+.campaign__cards {
+	margin-top: 2.5rem;
+}
+
+.campaign__contact {
+	padding-top: 5rem;
+}
+
+.campaign__card {
+	max-width: 20.8rem;
+	width: 100%;
+}
+
+.header {
+	align-items: center;
+	display: flex;
+}
+
+.header__inner {
+	width: 100%;
+}
+
+.header-logo__link {
+	width: 8.312rem;
+}
+
+.inner {
+	max-width: 1150px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.mv__title {
+	font-size: 5rem;
+}
+
+.section-title__main {
+	font-size: 2.5rem;
+}
+
+.md-none {
+	display: none;
+}
+
+.md-show {
+	display: block;
+}
+
+}
+
+@media (min-width: 1100px) {
+
+html {
+	font-size: 16px;
+}
+
+}
+
+@media (max-width: 375px) {
+
+html {
+	font-size: 4.2666666667vw;
+}
+
+}
+
+
+/*# sourceMappingURL=style.css.map */

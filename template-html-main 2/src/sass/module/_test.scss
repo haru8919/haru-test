@@ -1,0 +1,83 @@
+@use "global" as *;
+
+.section-title {
+  display: inline-block;
+  width: 100%;
+}
+
+.section-title__main {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: 2rem;
+  line-height: 1.25;
+  text-align: center;
+  @include mq("md") {
+    font-size: 2.5rem;
+  }
+}
+.section-title__main span {
+  color: $green;
+}
+
+.section-title__sub {
+  color: $green;
+  font-family: $third-font-family;
+  font-size: 0.75rem;
+  font-weight: $regular;
+  line-height: 1.5;
+  text-align: center;
+}
+
+a.btn {
+  border: 1px solid $green;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  width: 12.6rem;
+  margin: auto;
+  padding: 1rem 3rem;
+  font-weight: bold;
+  color: $white;
+  background: $green;
+  transition: 0.3s ease-in-out;
+}
+a.btn::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 1px solid $green;
+  transition: 0.2s;
+  z-index: -1;
+}
+.btn-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 2.5rem;
+}
+
+a.btn:hover .btn-icon path {
+  stroke: $green;
+}
+
+a.btn:hover {
+  background: $white;
+  color: $green;
+}
+
+.md-none {
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.md-show {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
